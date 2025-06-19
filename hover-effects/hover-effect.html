@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Hover Effect</title>
+		<link
+			rel="stylesheet"
+			href="../shared/styles.css" />
+		<style>
+			button {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: black;
+				border: 1px solid transparent;
+				border-radius: 6px;
+				color: white;
+				cursor: pointer;
+				font-style: 18px;
+				font-weight: 500;
+				margin-top: 20px;
+				padding: 0 10px;
+				transition: ease-in-out 0.2s;
+				height: 50px;
+				width: 200px;
+
+				&:hover {
+					background-color: #f1ff59;
+					border-color: black;
+					box-shadow: 3px 3px 0px 1px rgba(0, 0, 0, 1);
+					color: black;
+					transform: translate(-3px, 3px);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<button>Button</button>
+	</body>
+</html>

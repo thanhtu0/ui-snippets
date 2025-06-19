@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Sidebar</title>
+		<link
+			rel="stylesheet"
+			href="../shared/styles.css" />
+		<style>
+			a {
+				text-decoration: none;
+				color: lightslategray;
+				text-transform: none;
+				transition: 0.25s ease;
+			}
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				list-style: none;
+			}
+			ul li {
+				text-decoration: none;
+				margin: 0 0.75em 0 0.75em;
+			}
+			ul:hover a {
+				color: #575757;
+			}
+
+			ul:hover a:hover {
+				color: #8eaafb;
+				box-shadow: 0.2px 0 0 currentColor;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">News</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</body>
+</html>
