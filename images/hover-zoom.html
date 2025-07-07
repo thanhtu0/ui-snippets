@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Image Hover Zoom</title>
+		<link
+			rel="stylesheet"
+			href="../shared/styles.css" />
+		<style>
+			.img-wrapper {
+				width: 60%;
+				height: 100%;
+				border-radius: 20px;
+				overflow: hidden;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				transition: ease-in-out.4s;
+			}
+
+			img:hover {
+				transform: scale(1.6);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="img-wrapper">
+			<img
+				src="https://thanhnien.mediacdn.vn/uploaded/hoangnam/2021_05_29/hong-hoang-wikipedia_LWGT.jpg?width=500"
+				alt="Example images" />
+		</div>
+	</body>
+</html>

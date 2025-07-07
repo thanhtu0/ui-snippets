@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Input Animations</title>
+		<link
+			rel="stylesheet"
+			href="../shared/styles.css" />
+		<style>
+			.input-wrapper {
+				position: relative;
+				line-height: 14px;
+				margin: 0 10px;
+				display: inline-block;
+			}
+
+			label {
+				color: #4d4d4d;
+				font-size: 11px;
+				text-transform: uppercase;
+				position: absolute;
+				z-index: 2;
+				left: 20px;
+				top: 14px;
+				padding: 0 2px;
+				background-color: #d9dce3;
+				transition: transform 0.2s ease;
+			}
+
+			input {
+				font-size: 13px;
+				color: #4d4d4d;
+				background-color: transparent;
+				outline: none;
+				border: 1px solid #4d4d4d;
+				padding: 10px 20px;
+				border-radius: 20px;
+				position: relative;
+			}
+			input:invalid + label {
+				transform: translateY(0);
+			}
+
+			input:focus {
+				border-color: #4d4d4d;
+			}
+
+			input:focus + label {
+				color: #4d4d4d;
+				transform: translateY(-20px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="input-wrapper">
+			<input
+				type="text"
+				id="username" />
+			<label for="username">Username</label>
+		</div>
+	</body>
+</html>

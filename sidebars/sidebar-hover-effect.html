@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Sidebar Hover Effect</title>
+
+		<script src="https://unpkg.com/lucide@latest"></script>
+		<style>
+			body {
+				background-color: lightgrey;
+			}
+			.sidebar {
+				width: 60px;
+				height: 100%;
+				padding: 10px;
+				box-sizing: border-box;
+				background-color: #ffffff;
+				transition: ease-in-out 0.3s;
+				overflow: hidden;
+			}
+
+			.sidebar:hover {
+				width: 200px;
+			}
+
+			.sidebar:hover > .item > .text {
+				opacity: 1;
+			}
+
+			hr {
+				height: 1px;
+				color: #919191;
+				margin: 15px 0;
+			}
+
+			.item {
+				display: flex;
+				align-items: center;
+				margin: 20px 0;
+			}
+
+			.item .icon {
+				width: 40px;
+				height: 35px;
+				flex-shrink: 0;
+				fill: #424242;
+			}
+
+			.item .text {
+				opacity: 0;
+				transition: ease-in-out 0.3s;
+				transition-delay: 0.2s;
+				margin-left: 15px;
+				white-space: nowrap;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sidebar">
+			<div class="item">
+				<i
+					data-lucide="app-window"
+					class="icon"></i>
+				<div class="text">The App</div>
+			</div>
+			<hr />
+			<div class="item">
+				<i
+					data-lucide="layout-dashboard"
+					class="icon"></i>
+				<div class="text">Dashboard</div>
+			</div>
+			<div class="item">
+				<i
+					data-lucide="search"
+					class="icon"></i>
+				<div class="text">Search</div>
+			</div>
+			<div class="item">
+				<i
+					data-lucide="activity"
+					class="icon"></i>
+				<div class="text">Insights</div>
+			</div>
+			<div class="item">
+				<i
+					data-lucide="file-text"
+					class="icon"></i>
+				<div class="text">Docs</div>
+			</div>
+			<div class="item">
+				<i
+					data-lucide="settings"
+					class="icon"></i>
+				<div class="text">Settings</div>
+			</div>
+		</div>
+
+		<script>
+			lucide.createIcons();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Toggle password</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+			rel="stylesheet" />
+		<style>
+			input {
+				background-color: transparent;
+				padding: 12px 20px;
+				border: 1px solid #4d4d4d;
+				border-radius: 20px;
+				font-size: 16px;
+				outline: none;
+			}
+
+			#eyes {
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+			}
+
+			.password-wrapper {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+
+			.show-password > #open-eye {
+				display: unset;
+			}
+
+			.show-password > #closed-eye {
+				display: none;
+			}
+
+			#open-eye {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="password-wrapper">
+			<input
+				type="password"
+				name="password"
+				id="password"
+				placeholder="Password" />
+
+			<div id="eyes">
+				<span
+					id="open-eye"
+					class="material-symbols-outlined"
+					>visibility</span
+				>
+				<span
+					id="closed-eye"
+					class="material-symbols-outlined"
+					>visibility_off</span
+				>
+			</div>
+		</div>
+	</body>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			document.querySelector('#eyes').addEventListener('click', function () {
+				this.classList.toggle('show-password');
+				let x = document.querySelector('input[name=password]');
+				console.log(x.type);
+				if (x.type === 'password') {
+					x.type = 'text';
+				} else {
+					x.type = 'password';
+				}
+			});
+		});
+	</script>
+</html>
