@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Need a cool loader</title>
+		<style>
+			body {
+                margin: 0;
+				overflow: hidden;
+				display: grid;
+				place-items: center;
+                background-color: darkcyan;
+			}
+
+			.loader {
+				width: 200px;
+				height: 200px;
+				margin: auto;
+				position: relative;
+			}
+
+			.loader::before {
+				content: '';
+				width: 200px;
+				height: 20px;
+				background: #f0808050;
+				position: absolute;
+				top: 223px;
+				left: 0;
+				border-radius: 50%;
+				animation: shadow 0.5s linear infinite;
+			}
+
+			.loader::after {
+				content: '';
+				width: 100%;
+				height: 100%;
+				background: #f08080;
+				position: absolute;
+				top: 0;
+				left: 0;
+				border-radius: 16px;
+				animation: jump 0.5s linear infinite;
+			}
+
+			@keyframes jump {
+				15% {
+					border-bottom-right-radius: 30px;
+				}
+
+				25% {
+					transform: translateY(19px) rotate(22.5deg);
+				}
+
+				50% {
+					transform: translateY(58px) scale(1, 0.9) rotate(45deg);
+					border-bottom-right-radius: 105px;
+				}
+
+				75% {
+					transform: translateY(19px) rotate(67.5deg);
+				}
+				100% {
+					transform: translateY(0) rotate(90deg);
+				}
+			}
+			@keyframes shadow {
+				0%,
+				100% {
+					transform: scale(1, 1);
+				}
+
+				50% {
+					transform: scale(1.2, 1);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="loader"></div>
+	</body>
+</html>
